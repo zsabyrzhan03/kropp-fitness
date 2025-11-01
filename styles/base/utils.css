@@ -4,6 +4,11 @@
   padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -27,6 +32,14 @@
   font-size: clamp(24px, 3.12vw, 60px);
 }
 
+.section-description {
+  font-size: 20px;
+  line-height: 1.65;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-light);
+}
+
 .backdrop-title {
   position: relative;
   z-index: 2;
@@ -46,16 +59,23 @@
   content: attr(data-title);
   position: absolute;
   z-index: -1;
-  top: -0.45em;
+  top: -0.3em;
   left: -0.6em;
   font-family: var(--font-family-accent);
   font-size: 2.8em;
+  line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1px var(--color-dark-gray);
 }
 
 .backdrop-title.centered::after {
-  top: -0.55em;
+  top: -0.25em;
   left: 50%;
   translate: -50% 0;
+}
+
+@media (max-width: 767px) {
+  .section-description {
+    font-size: 16px;
+  }
 }
