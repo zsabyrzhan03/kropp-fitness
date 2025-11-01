@@ -36,6 +36,13 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 @media (max-width: 767px) {
   .location-body {
     padding-block: 40px;
